@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator - MikiDev</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Import Font - Raleway -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Import font - Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+  <h1>Calculator</h1>
+  <main class="contenido">
+
+    <div class="calculadora">
+      <div class="input">
+        <p>0</p>
+        <span class="resultado">0</span>
+      </div>
+      <div class="teclas">
+        <!-- 1st row -->
+        <button class="button-cls clear">C</button>
+        <button class="button two-data-operation">^</button> <!-- X to the power -->
+        <button class="button two-data-operation">%</button> <!-- Module -->
+        <button class="button two-data-operation">/</button> <!-- Division -->
+        
+        <!-- 2nd row -->
+        <button class="button btn-n">7</button>
+        <button class="button btn-n">8</button>
+        <button class="button btn-n">9</button>
+        <button class="button two-data-operation">*</button> <!-- Multiplication -->
+        
+        <!-- 3rd row -->
+        <button class="button btn-n">4</button>
+        <button class="button btn-n">5</button>
+        <button class="button btn-n">6</button>
+        <button class="button two-data-operation">-</button> <!-- Substract -->
+        
+        <!-- 4th row -->
+        <button class="button btn-n">1</button>
+        <button class="button btn-n">2</button>
+        <button class="button btn-n">3</button>
+        <button class="button two-data-operation">+</button> <!-- Addition -->
+        
+        <!-- 5th row -->
+        <button class="button one-data-operation">&#8730;</button> <!-- Square root -->
+        <button class="button btn-n">0</button>
+        <button class="button comma">,</button> <!-- Comma (For decimals
+          ) -->
+        <button class="button-equals">=</button> <!-- Equals -->
+        
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <p>MikiDev. 2023</p>
+    </div>
+    <div class="social">
+      <a href="#">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="#">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+    <p class="love">Desarrollado moviendo las ✋ y con 💙</p>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
