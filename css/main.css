@@ -1,3 +1,16 @@
+/* Global colors */
+
+:root {
+  --background: #eff0f3;
+  --footer: #bebcbc;
+  --button: rgb(252 211 77);
+  --buttonHover: rgb(251 191 36);
+  --text: rgb(37 99 235);
+  --input: #b9babb;
+}
+
+/* Main styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +19,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #efefef;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
@@ -18,6 +31,7 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
+  color: var(--text);
 }
 
 .main-content{
@@ -52,7 +66,7 @@ main .calculadora .input {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 1rem 2rem;
-  background: rgb(128, 128, 128);
+  background: var(--input);
   font-size: 30px;
   font-family: "Roboto Mono", sans-serif
 }
@@ -89,8 +103,8 @@ main .calculadora .teclas button {
   border-radius: 50%;
   margin: auto;
   border: none;
-  background: #6b7268;
-  color: #6bd1ff;
+  background: var(--button);
+  color: var(--text);
   transition: all .3s ease;
   font-weight: 400;
   font-size: 1rem;
@@ -110,7 +124,86 @@ main .calculadora .teclas button.clear {
 }
 
 main .calculadora .teclas button:hover {
-  background: #636761;
+  background: var(--buttonHover);
   cursor: pointer;
   scale: 1.05;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--footer);
+  width: 100%;
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  padding-top: 1rem;
+  gap: 2rem;
+}
+
+@media (min-width: 768px){
+  footer {
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+  }
+}
+
+footer .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .logo img{
+  width: 50px;
+  height: 50px;
+}
+
+footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+footer .social a {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(128, 128, 128);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  padding: 2rem;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+footer .social a:hover {
+  scale: 1.05;
+  background: rgb(158, 157, 157);
+}
+
+footer .social a i{
+  color: white;
+  font-size: 20px;
+}
+
+footer p.love {
+  padding-left: 1.5rem;
+  width: 100%;
+  color: rgba(0, 0, 0, .2);
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+@media (min-width: 768px){
+  footer p.love {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-bottom: 0.5rem;
+    margin-top: 0.25rem;
+  }
 }
