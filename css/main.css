@@ -5,11 +5,12 @@
 }
 
 body {
-  max-height: 100vh;
+  min-height: 100vh;
   background-color: #efefef;
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
+  height: 100vh;
 }
 
 h1 {
@@ -19,19 +20,32 @@ h1 {
   padding: 1rem 0;
 }
 
+.main-content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 main .calculadora {
   border-radius: 10px;
   background: white;
-  width: 60%;
+  width: 90%;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+  main .calculadora {
+    width: 60%;
+  }
 }
 
 main .calculadora .input {
@@ -57,22 +71,38 @@ main .calculadora .input .resultado {
 main .calculadora .teclas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  padding: 2rem 0;
+  gap: 1rem;
+  padding: 3rem 0;
   place-content: center;
 }
 
+@media (min-width: 768px){
+  main .calculadora .teclas {
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+}
+
 main .calculadora .teclas button {
-  width: 80px;
-  height: 80px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   margin: auto;
   border: none;
   background: #6b7268;
   color: #6bd1ff;
-  font-size: 2rem;
-  font-weight: 900;
   transition: all .3s ease;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px){
+  main .calculadora .teclas button {
+    width: 80px;
+    height: 80px;
+    font-weight: 900;
+    font-size: 2rem;
+  }
 }
 
 main .calculadora .teclas button.clear {
@@ -82,67 +112,5 @@ main .calculadora .teclas button.clear {
 main .calculadora .teclas button:hover {
   background: #636761;
   cursor: pointer;
-  scale: rgb(254, 27, 27)
-}
-
-/* Footer */
-
-footer {
-  background-color: #6b7268;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 120px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  place-content: center;
-}
-
-footer .logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-footer .logo img{
-  width: 50px;
-  height: 50px;
-}
-
-footer .social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-}
-
-footer .social a {
-  width: 40px;
-  height: 40px;
-  background-color: rgb(128, 128, 128);
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
-  padding: 2rem;
-  text-decoration: none;
-  transition: all .3s ease;
-}
-
-footer .social a:hover {
   scale: 1.05;
-  background: rgb(158, 157, 157);
-}
-
-footer .social a i{
-  color: white;
-  font-size: 20px;
-}
-
-footer p.love {
-  padding-left: 1.5rem;
-  width: 100%;
-  position: fixed;
-  bottom: 10px;
-  color: rgba(0, 0, 0, .2);
 }

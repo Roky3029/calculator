@@ -54,7 +54,11 @@ buttons.forEach(button => {
 
     if (button.classList.contains('one-data-operation') && firstValue) {
       input.textContent = `√${firstValue}`
-      resultado.textContent = Math.sqrt(firstValue)
+      result = Math.sqrt(firstValue)
+      resultado.textContent = result
+      firstValue = result
+      operation = ''
+      secondValue = ''
     }
   })
 })
@@ -74,14 +78,14 @@ buttonEquals.addEventListener('click', () => {
   result = operate[operation](firstValue, secondValue)
 
   resultado.textContent = result
+
+  firstValue = result
+  operation = ''
+  secondValue = ''
 })
 
 // TODO: 
 /* 
-* Add the decimal functionality
-* Add the posibility to create a combined operation
-* Responsive mode
-* Adjust the parameters in the footer
 * Add links to the footer
 * Add sine, cosine and tangent
 * Add logarithm

@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator - MikiDev</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
 
   <!-- Import Font - Raleway -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +24,13 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+  <!-- JS Script -->
+  <script src="js/index.js" defer></script>
 </head>
 <body>
-  <h1>Calculator</h1>
+  <div class="main-content">
+    <h1>Calculator</h1>
   <main class="contenido">
 
     <div class="calculadora">
@@ -33,7 +40,7 @@
       </div>
       <div class="teclas">
         <!-- 1st row -->
-        <button class="button-cls clear">C</button>
+        <button class="button one-data-operation">&#8730;</button> <!-- Square root -->
         <button class="button two-data-operation">^</button> <!-- X to the power -->
         <button class="button two-data-operation">%</button> <!-- Module -->
         <button class="button two-data-operation">/</button> <!-- Division -->
@@ -57,15 +64,16 @@
         <button class="button two-data-operation">+</button> <!-- Addition -->
         
         <!-- 5th row -->
-        <button class="button one-data-operation">&#8730;</button> <!-- Square root -->
+        <button class="button-cls clear">C</button>
         <button class="button btn-n">0</button>
-        <button class="button comma">,</button> <!-- Comma (For decimals
+        <button class="button btn-n">.</button> <!-- Comma (For decimals
           ) -->
         <button class="button-equals">=</button> <!-- Equals -->
         
       </div>
     </div>
   </main>
+  </div>
 
   <footer>
     <div class="logo">
@@ -73,16 +81,14 @@
       <p>MikiDev. 2023</p>
     </div>
     <div class="social">
-      <a href="#">
+      <a href="https://twitter.com/Dev30Kirky" target="_blank">
         <i class="fa-brands fa-twitter"></i>
       </a>
-      <a href="#">
+      <a href="https://github.com/Roky3029" target="_blank">
         <i class="fa-brands fa-github"></i>
       </a>
     </div>
-    <p class="love">Desarrollado moviendo las ✋ y con 💙</p>
+    <p class="love">Desarrollado con 💙</p>
   </footer>
-
-  <script src="js/index.js"></script>
 </body>
 </html>
